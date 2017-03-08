@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700|Open+Sans:800|Source+Sans+Pro:300,700);
+
+$base-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+
+$heading-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-2-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+* {
+	font-family: $base-font-family;
+	text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+	line-height: 1em;
+}
+
+body {
+	@include media-query($medium-portrait) {
+		font-size: 0.875em;
+	}
+}
+
+h1 {
+	font-family: $heading-font-family;
+	font-size: 54px;
+	margin: 0;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: $title;
+  letter-spacing: -3px;
+  line-height: .95em;
+
+	@include media-query($medium-portrait) {
+		font-size: 48px;
+	}
+}
+
+select {
+	color: $black;
+	font-family: $base-font-family;
+	font-weight: 300;
+	font-size: 28px;
+}
+
+h2 {
+	color: $sub-title;
+	font-family: $heading-2-font-family;
+	font-weight: 300;
+	margin: 0;
+	padding: 37px 0 0 0;
+	font-size: 34px;
+
+	a.block {
+		font-size: 0.8em;
+	}
+
+	@include media-query($medium-portrait) {
+		padding: 24px 0 0 0;
+		font-size: 24px;
+	}
+}
+
+p {
+	letter-spacing: -0.015em;
+	font-size: 1.25em;
+
+	&.warning {
+		color: #920202;
+		font-size: .9em;
+	}
+}
+
+a {
+	color: $brand-color;
+	text-decoration: none;
+
+	&:hover {
+		color: darken($brand-color, 10%);
+	}
+
+	&.pseudo {
+		border-bottom: 1px dashed $brand-color;
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+
+	&.block {
+		display: block;
+		font-weight: bold;
+		margin-top: 1em;
+		text-transform: uppercase;
+	}
+}
