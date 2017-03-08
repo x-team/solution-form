@@ -18,3 +18,7 @@ A small UI component for submitting solutions to a challenge.
 ### textarea validation
 
 - content matches the previously submitted (incorrect) solution: display as "invalid"
+
+## appearance
+
+- https://github.com/x-team/solution-form/issues/1
