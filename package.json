@@ -1,0 +1,13 @@
+{
+  "name": "solution-form",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A small UI component for submitting solutions to a challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT"
+}
