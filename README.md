@@ -22,3 +22,8 @@ A small UI component for submitting solutions to a challenge.
 ## appearance
 
 - https://github.com/x-team/solution-form/issues/1
+
+## running this repo
+
+- install webpack-dev-server `npm i -g webpack-dev-server`
+- run `npm run start`

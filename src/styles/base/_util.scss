@@ -1,0 +1,45 @@
+@mixin media-query($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin button-selector() {
+	.button,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		@content;
+	}
+}
+
+@mixin input-selector() {
+	input[type="text"],
+	input[type="password"],
+	select,
+	textarea {
+		@content
+	}
+}
+
+@mixin cf() {
+  zoom: 1;
+
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}

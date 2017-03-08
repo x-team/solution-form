@@ -1,0 +1,19 @@
+.component-SolutionForm {
+	text-align: center;
+
+	textarea {
+		background: white;
+		border: $gray-2 solid 3px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 28px;
+	    margin: 30px 1em;
+		outline: none;
+		padding: 10px 20px;
+		transition: all .2s ease;
+		height: 156px;
+		resize: none;
+		max-width: 740px;
+		width: 100%;
+	}
+}
