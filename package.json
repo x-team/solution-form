@@ -21,5 +21,8 @@
     "babel-preset-stage-2": "^6.22.0",
     "babelify": "^7.3.0",
     "monobrow": "^2.6.2"
+  },
+  "dependencies": {
+    "cmz": "^2.0.1"
   }
 }
