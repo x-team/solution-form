@@ -2,7 +2,21 @@
 
 A small UI component for submitting solutions to a challenge.
 
-## behaviour
+## Install
+
+```
+npm install
+```
+
+## Build frontend
+
+```
+npm run packs:build
+npm run build -- -w &
+open index.html
+```
+
+## behavior
 
 ###  heading
 
