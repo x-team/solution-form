@@ -1,5 +1,5 @@
 module.exports = {
-  entry: 'src/frontend/index.js',
+  entry: 'src/index.js',
   output: {
     dir: 'dist',
     vendor: 'vendor.js'
