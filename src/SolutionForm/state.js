@@ -8,36 +8,44 @@ const maxAttempts = 3;
 const states = {};
 
 states.init = {
-  fieldValue: '',
+  solutionValue: '',
+  isValid: false,
+  isSubmitting: false,
   heading: 'Got it?',
-  subheading: 'Paste the solution below. You get 3 chances.',
-  button: `Submit (${takenAttempts} of ${maxAttempts} attempts)`,
+  subHeading: 'Paste the solution below. You get 3 chances.',
+  buttonText: `Submit (${takenAttempts} of ${maxAttempts} attempts)`,
 }
 
 states.wrong = {
   ...states.init,
+  isValid: false,
   heading: 'Oops!',
-  subheading: `You haven’t submitted the right solution
-Please try again.`,
+  subheading: `You haven’t submitted the right solution. Please try again.`,
+}
+
+states.submitting = {
+  ...states.init,
+  isSubmitting: true
 }
 
 
 module.exports = React.createClass({
   displayName: 'State',
 
-  getInitialState: function () {
-    return states.init
+  getInitialState: function() {
+    return states.wrong
   },
 
-  handleFieldChange: function (event) {
+  handleValueChange: function(event) {
     this.setState({
-      fieldValue: event.target.value,
+      solutionValue: event.target.value
     })
   },
 
   render: function () {
+    console.log(this);
     return <Component {...this.state}
-      buttonDisabled={!this.state.fieldValue}
-      onFieldChange={ this.handleFieldChange }/>
+      isButtonDisabled={!this.state.solutionValue}
+      onValueChange={ this.handleValueChange } />
   }
 })

@@ -3,15 +3,19 @@ import React from 'react'
 module.exports = props => <div className="component-SolutionForm">
   <div className='title'>
     <h1 className='heading'>{props.heading}</h1>
-    <h2 className='subheading'>{props.subheading}</h2>
+    <h2 className='subHeading'>{props.subHeading}</h2>
     <textarea
-      onChange={ props.onFieldChange }
+      onChange={ props.onValueChange }
       placeholder={'Solution'}
       name='solution'
       className='block'
     />
     <div>
-      <input type="button" disabled={props.buttonDisabled} value={props.button} />
+    {
+      props.isSubmitting ?
+      <span>Checking...</span> :
+      <input type="button" disabled={props.isButtonDisabled} value={props.buttonText} />
+    }
     </div>
   </div>
 </div>
