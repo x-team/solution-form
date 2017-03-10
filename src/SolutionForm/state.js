@@ -12,7 +12,7 @@ states.init = {
   isValid: false,
   isSubmitting: false,
   heading: 'Got it?',
-  subHeading: 'Paste the solution below. You get 3 chances.',
+  subHeading: 'Paste the solution below. You get ${maxAttempts} chances.',
   buttonText: `Submit (${takenAttempts} of ${maxAttempts} attempts)`,
 }
 
