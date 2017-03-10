@@ -43,7 +43,6 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    console.log(this);
     return <Component {...this.state}
       isButtonDisabled={!this.state.solutionValue}
       onValueChange={ this.handleValueChange } />
