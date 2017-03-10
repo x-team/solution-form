@@ -33,7 +33,7 @@ module.exports = React.createClass({
   displayName: 'State',
 
   getInitialState: function() {
-    return states.wrong
+    return states.init
   },
 
   handleValueChange: function(event) {
