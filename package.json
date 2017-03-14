@@ -23,6 +23,6 @@
     "monobrow": "^2.6.2"
   },
   "dependencies": {
-    "cmz": "^2.0.1"
+    "cmz": "^2.2.1"
   }
 }
