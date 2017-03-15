@@ -79,12 +79,12 @@ const styles = cmz('SolutionForm', {
     `]
 });
 
-module.exports = props => <div className={ styles.root }>
-  <Title hasAttempted={ props.hasAttempted }
-    maxAttempts={ props.maxAttempts } />
+module.exports = props => <div className={styles.root}>
+  <Title hasAttempted={props.hasAttempted}
+    maxAttempts={props.maxAttempts} />
   <form className={styles.form}>
     <textarea className={styles.textarea}
-      onChange={ props.onValueChange }
+      onChange={props.onValueChange}
       placeholder={'Solution'}
       name='solution'
     />
