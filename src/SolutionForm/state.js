@@ -21,7 +21,6 @@ states.submitting = {
   isSubmitting: true
 }
 
-
 module.exports = React.createClass({
   displayName: 'State',
 

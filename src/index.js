@@ -3,9 +3,7 @@ import { render } from 'react-dom'
 import SolutionForm from './SolutionForm/state'
 
 render(
-  <div>
-    <SolutionForm />
-  </div>,
+  <SolutionForm />,
   document.getElementById('root')
 )
 
