@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import cmz from 'cmz';
 
 const colors = {
@@ -23,16 +23,27 @@ const styles = cmz('Title', {
   `
 });
 
-module.exports = props => <div className={styles.root}>
-  {
-    props.hasAttempted ?
-    <div>
-      <h1 className={styles.heading}>Oops!</h1>
-      <div className={styles.subHeading}>You haven’t submitted the right solution. Please try again.</div>
-    </div> :
-    <div>
-      <h1 className={styles.heading}>Got it?</h1>
-      <div className={styles.subHeading}>Paste the solution below. You get {props.maxAttempts} chances.</div>
+const Title = (props) => {
+  return(
+    <div className={styles.root}>
+      {
+        props.hasAttempted ?
+        <div>
+          <h1 className={styles.heading}>Oops!</h1>
+          <div className={styles.subHeading}>You haven’t submitted the right solution. Please try again.</div>
+        </div> :
+        <div>
+          <h1 className={styles.heading}>Got it?</h1>
+          <div className={styles.subHeading}>Paste the solution below. You get {props.maxAttempts} chances.</div>
+        </div>
+      }
     </div>
-  }
-</div>
+  )
+}
+
+Title.propTypes = {
+  hasAttempted: PropTypes.bool.isRequired,
+  maxAttempts: PropTypes.number.isRequired
+}
+
+module.exports = Title
