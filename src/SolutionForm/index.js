@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import cmz from 'cmz';
 import Title from '../components/Title';
 
@@ -79,21 +79,37 @@ const styles = cmz('SolutionForm', {
     `]
 });
 
-module.exports = props => <div className={styles.root}>
-  <Title hasAttempted={props.hasAttempted}
-    maxAttempts={props.maxAttempts} />
-  <form className={styles.form}>
-    <textarea className={styles.textarea}
-      onChange={props.onValueChange}
-      placeholder={'Solution'}
-      name='solution'
-    />
-  </form>
-  <div>
-  {
-    props.isSubmitting ?
-    <input className={styles.button} type="button" disabled={true} value={'Checking...'} /> :
-    <input className={styles.button} type="button" disabled={props.isButtonDisabled} value={`Submit (${props.takenAttempts} of ${props.maxAttempts} attempts)`} />
-  }
-  </div>
-</div>
+const SolutionForm = (props) => {
+  return(
+    <div className={styles.root}>
+      <Title hasAttempted={props.hasAttempted}
+        maxAttempts={props.maxAttempts} />
+      <form className={styles.form}>
+        <textarea className={styles.textarea}
+          onChange={props.onValueChange}
+          placeholder={'Solution'}
+          name='solution'
+        />
+      </form>
+      <div>
+      {
+        props.isSubmitting ?
+        <input className={styles.button} type="button" disabled={true} value={'Checking...'} /> :
+        <input className={styles.button} type="button" disabled={props.isButtonDisabled} value={`Submit (${props.takenAttempts} of ${props.maxAttempts} attempts)`} />
+      }
+      </div>
+    </div>
+  )
+}
+
+SolutionForm.propTypes = {
+  solutionValue: PropTypes.string.isRequired,
+  isSubmitting: PropTypes.bool.isRequired,
+  hasAttempted: PropTypes.bool.isRequired,
+  takenAttempts: PropTypes.number.isRequired,
+  isButtonDisabled: PropTypes.bool.isRequired,
+  maxAttempts: PropTypes.number.isRequired,
+  onValueChange: PropTypes.func.isRequired
+}
+
+module.exports = SolutionForm
